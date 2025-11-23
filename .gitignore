@@ -1,2 +1,4 @@
 /target
 /m2.sqlite3
+/e2e-tests/src/target
+/e2e-tests/m2.sqlite3

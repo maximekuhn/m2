@@ -1,0 +1,11 @@
+services:
+  server:
+    build:
+      context: .
+      target: final
+    ports:
+      - 55432:55432
+    volumes:
+      - ./config.yml:/home/m2/config.yml:ro
+      - ./m2.sqlite3:/home/m2/m2.sqlite3:rw
+

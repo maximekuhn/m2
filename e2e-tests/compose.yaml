@@ -1,0 +1,21 @@
+services:
+  server:
+    build:
+      context: ..
+      target: final
+    ports:
+      - 55432:55432
+    volumes:
+      - ./e2e-config.yml:/home/m2/config.yml:ro
+      - ./m2.sqlite3:/home/m2.sqlite3:rw
+
+  karate:
+    build:
+      context: .
+      dockerfile: Karate.Dockerfile
+    volumes:
+      - ./src:/src
+    working_dir: /src
+    command: ["java", "-jar", "/karate.jar", "."]
+    restart: "no"
+

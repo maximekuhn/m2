@@ -48,6 +48,7 @@ pub struct RegisterBody {
 }
 
 #[derive(new, Serialize, ToSchema)]
+#[serde(rename_all = "camelCase")]
 pub struct RegisterResponse {
     user_id: Uuid,
 }

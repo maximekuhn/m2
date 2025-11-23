@@ -1,0 +1,5 @@
+# REST API configuration for E2E tests.
+
+database: "m2.sqlite3"
+swagger-enabled: false
+
