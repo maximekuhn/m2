@@ -1,0 +1,6 @@
+# This is an example configuration file for the REST API.
+# Use it for development purposes.
+
+database: "m2.sqlite3"
+swagger-enabled: true
+

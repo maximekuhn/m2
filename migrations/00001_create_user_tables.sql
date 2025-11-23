@@ -1,0 +1,12 @@
+CREATE TABLE user (
+    id BLOB(16) PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE,
+    email TEXT NOT NULL UNIQUE,
+    created_at TIMESTAMP NOT NULL
+);
+
+CREATE TABLE user_role (
+    user_id BLOB(16) PRIMARY KEY,
+    role INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
+);
